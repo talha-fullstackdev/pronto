@@ -12,7 +12,7 @@ import { MdPermContactCalendar } from "react-icons/md";
 import { TbLogout2 } from "react-icons/tb";
 import { MdOutlineKeyboardArrowDown } from "react-icons/md";
 import { MdOutlineKeyboardArrowUp } from "react-icons/md";
-import Header from '../header/Header';
+
 const Sidebar = () => {
   const [activeItem, setActiveItem] = useState(''); // State to track the active menu item
   const [isSmsDropdownOpen, setIsSmsDropdownOpen] = useState(false); // For SMS dropdown
@@ -32,7 +32,7 @@ const Sidebar = () => {
         <div className="text-2xl font-semibold text-grey-500">PRONTO</div>
       </div>
 
-      <nav className="flex flex-col mt-4">
+      <nav className="flex flex-col mt-2">
         <a 
           href="#"
           className={`flex items-center p-4  ${activeItem === 'overview' ? 'bg-red-400 text-white rounded-lg' : ''}`}

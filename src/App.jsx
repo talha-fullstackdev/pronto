@@ -9,7 +9,7 @@ function App() {
       <Sidebar/>
       <div className="flex flex-col w-full mr-4">
       <Header/>
-      {/* <Form/> */}
+      <Form/>
       </div>
      
 

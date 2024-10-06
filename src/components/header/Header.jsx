@@ -3,6 +3,7 @@ import React, { useState } from 'react';
 import { MdEmail } from "react-icons/md";
 import { FaBell } from "react-icons/fa";
 import { FaUserAlt } from "react-icons/fa";
+import User from "../../assets/images/user.jpeg"
 
 const Header = () => {
   // State to handle dropdown visibility
@@ -38,9 +39,10 @@ const Header = () => {
             className="flex items-center space-x-2 text-gray-700 cursor-pointer gap-2"
             onClick={toggleDropdown} // Toggle dropdown on click
           >
-            <FaUserAlt className="h-5 w-5 text-gray-500" />
+            {/* <FaUserAlt className="h-5 w-5 text-gray-500" /> */}
+            <img src={User} alt="user" className="h-[50px] w-[50px]  rounded-full"  />
             <div className="flex flex-col leading-tight">
-              <span className="font-medium">Robert Norton</span>
+              <span className="font-medium">Talha Nawaz</span>
               <span className="text-sm text-gray-400">Super Admin</span>
             </div>
 

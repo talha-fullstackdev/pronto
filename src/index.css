@@ -1,3 +1,12 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+/* Style for custom switch */
+.custom-switch.ant-switch-checked {
+    background-color: #f28b82 !important; /* Light Red Color */
+  }
+  
+  .custom-switch.ant-switch {
+    border-color: #f28b82;
+  }
+  
