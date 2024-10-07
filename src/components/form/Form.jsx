@@ -5,13 +5,15 @@ import SmsBody from "./SmsBody";
 import SurveySection from "./SurveySection";
 import PreviewMsg from "./PreviewMsg";
 const Form = () => {
+ 
+
   return (
     <div className="p-4">
-      <SmsChanel />
-      <CompainSection />
+      <SmsChanel/>
+      <CompainSection  />
       <SmsBody />
-      <SurveySection />
-      <PreviewMsg />
+      <SurveySection  />
+      {/* <PreviewMsg  /> */}
     </div>
   );
 };

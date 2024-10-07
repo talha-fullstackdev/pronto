@@ -1,5 +1,3 @@
-
-
 import React, { useState } from 'react';
 import { HiMiniSquares2X2 } from "react-icons/hi2";
 import { FaNetworkWired } from "react-icons/fa";
@@ -12,6 +10,7 @@ import { MdPermContactCalendar } from "react-icons/md";
 import { TbLogout2 } from "react-icons/tb";
 import { MdOutlineKeyboardArrowDown } from "react-icons/md";
 import { MdOutlineKeyboardArrowUp } from "react-icons/md";
+import { NavLink } from 'react-router-dom';
 
 const Sidebar = () => {
   const [activeItem, setActiveItem] = useState(''); // State to track the active menu item
@@ -26,7 +25,7 @@ const Sidebar = () => {
   };
   return (
  
-    <div className="w-64 h-screen  flex flex-col ml-2">
+    <div className="w-64 h-screen  flex flex-col ml-2 mt-4">
       {/* Logo */}
       <div className="flex items-center p-4">
         <div className="text-2xl font-semibold text-grey-500">PRONTO</div>
@@ -64,8 +63,8 @@ const Sidebar = () => {
           </div>
           {isSmsDropdownOpen && (
             <div className="ml-8 flex flex-col">
-              <a href="#" className="p-2 hover:bg-gray-200">Option 1</a>
-              <a href="#" className="p-2 hover:bg-gray-200">Option 2</a>
+              <a href="#" className="p-2 hover:bg-gray-200">sms chanel one</a>
+              <a href="#" className="p-2 hover:bg-gray-200">sms chanel two</a>
             </div>
           )}
         </div>
@@ -77,13 +76,13 @@ const Sidebar = () => {
         >
          <MdEmail className='mr-2'/>Email Channel
         </a>
-        <a 
-          href="#"
+        <NavLink 
+         to={"/whatsapp"}
           className={`flex items-center p-4  ${activeItem === 'whatsapp-channel' ? 'bg-red-400 text-white rounded-lg' : ''}`}
           onClick={() => handleItemClick('whatsapp-channel')}
         >
          <FaWhatsapp className='mr-2'/>WhatsApp Channel
-        </a>
+        </NavLink>
         <a 
           href="#"
           className={`flex items-center p-4  ${activeItem === 'analytics' ? 'bg-red-400 text-white rounded-lg' : ''}`}
