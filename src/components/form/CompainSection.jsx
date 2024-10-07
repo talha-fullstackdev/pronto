@@ -1,18 +1,16 @@
-import React, { useRef } from 'react'
+
 import { Switch } from "antd";
 import "antd/dist/reset.css"; // Import Ant Design reset CSS
 import { addData } from '../../slices/FromDataSlice';
 import { useDispatch} from 'react-redux';
-const CompainSection = () => {
-  const nameRef = useRef()
-  const contactRef = useRef()
+const CompainSection = ({campaignNameRef,campaignContactRef}) => {
   const dispatch = useDispatch();
-  const handleOnChange=()=>{
-    const name = nameRef.current.value
-    const contact = contactRef.current.value
-    dispatch(addData({compainName:name,compainContact:contact}))
-  }
+  const handleOnChange = () => {
+    const name = campaignNameRef.current.value
+    const contact = campaignContactRef.current.value
+    dispatch(addData({campainName:name,campainContact:contact}))
 
+  };
   return (
     <div className="mt-6 flex gap-4">
         {/* First Campaign Input */}
@@ -28,8 +26,9 @@ const CompainSection = () => {
             type="text"
             placeholder="Enter campaign name"
             className="mt-2 p-2 border rounded-md"
-            ref={nameRef}
+            ref={campaignNameRef}
             onChange={handleOnChange}
+       
           />
         </div>
 
@@ -46,8 +45,9 @@ const CompainSection = () => {
             type="text"
             placeholder="Enter Contact Number"
             className="mt-2 p-2 border rounded-md"
-            ref={contactRef}
+            ref={campaignContactRef}
             onChange={handleOnChange}
+  
           />
         </div>
       </div>

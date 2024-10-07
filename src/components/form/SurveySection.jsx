@@ -4,35 +4,19 @@ import { addData } from "../../slices/FromDataSlice";
 import { useDispatch } from "react-redux";
 import PreviewMsg from "./PreviewMsg";
 import "antd/dist/reset.css";
-
-const SurveySection = () => {
-  const surveyRef = useRef();
-  const dataOneRef = useRef();
-  const timeRef = useRef();
-  const dateTwoRef = useRef();
-  const dispatch = useDispatch();
-
-  const handleOnClick = () => {
-    const surveyVal = surveyRef.current.value;
-    const dateOneVal = dataOneRef.current.value;
-    const timeVal = timeRef.current.value;
-    const dateTwoVal = dateTwoRef.current.value;
-
-    // Dispatch the action to add data to Redux
-    dispatch(
-      addData({
-        survayTemplate: surveyVal,
-        surveyDateOne: dateOneVal,
-        timeZone: timeVal,
-        surveyDateTwo: dateTwoVal,
-      })
-    );
-    surveyRef.current.value = "";
-    dataOneRef.current.value = "";
-    timeRef.current.value = "";
-    dateTwoRef.current.value = "";
-  };
-
+import { toast } from "react-toastify";
+const SurveySection = ({surveyRefs,resetAllFields}) => {
+  const {surveyRef,dateOneRef,timeRef,dateTwoRef}=surveyRefs
+  const dispatch = useDispatch()
+  const handleOnClick=()=>{
+    const survey = surveyRef.current.value
+    const dateOne = dateOneRef.current.value
+    const time = timeRef.current.value
+    const dateTwo = dateTwoRef.current.value
+    dispatch(addData({surveyValue:survey,dateOneValue:dateOne,timeValue:time,dateTwoValue:dateTwo}))
+    resetAllFields()
+    toast.success("send data to backend")
+  }
   return (
     <>
       <div className="flex items-center mt-4">
@@ -44,7 +28,7 @@ const SurveySection = () => {
         <div className="mb-4 w-[300px]">
           <p className="text-sm font-semibold mb-1">Select Survey Template</p>
           <select
-            ref={surveyRef}
+          ref={surveyRef}
             className="p-2 w-full border rounded-md mt-2"
           >
             <option value="">select survey one</option>
@@ -59,9 +43,10 @@ const SurveySection = () => {
         <div className="mb-4 w-[300px]">
           <p className="text-sm font-semibold mb-1">Survey Date/Time</p>
           <input
+          ref={dateOneRef}
             type="date"
             className="p-2 border rounded-md w-full mt-2"
-            ref={dataOneRef}
+      
           />
         </div>
 
@@ -69,8 +54,9 @@ const SurveySection = () => {
         <div className="mb-4 w-[300px]">
           <p className="text-sm font-semibold mb-1">Schedule Time Zone</p>
           <select
+          ref={timeRef}
             className="p-2 w-full border rounded-md mt-2"
-            ref={timeRef}
+       
           >
             <option value="">Please select survey time zone</option>
             <option value="Pacific/Midway">Pacific/Midway (UTC-11:00)</option>
@@ -94,11 +80,10 @@ const SurveySection = () => {
           />
         </div>
       </div>
-
-      {/* Pass handleOnClick to PreviewMsg component */}
-      <PreviewMsg handleOnClick={handleOnClick} />
+  <PreviewMsg handleOnClick={handleOnClick}/>
     </>
   );
 };
 
 export default SurveySection;
+

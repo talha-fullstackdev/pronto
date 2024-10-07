@@ -1,5 +1,7 @@
 import { createSlice } from "@reduxjs/toolkit";
+import { toast } from "react-toastify";
 import data from "../data/Data";
+
 const formSlice = createSlice({
   name: "formSlice",
   initialState: {
@@ -11,7 +13,10 @@ const formSlice = createSlice({
       state.formData = {
         ...state.formData,
         ...action.payload // This will add or update properties in the formData object
+        
       };
+     
+    
     },
   },
 });
