@@ -1,5 +1,4 @@
 import { createSlice } from "@reduxjs/toolkit";
-import { toast } from "react-toastify";
 import data from "../data/Data";
 
 const formSlice = createSlice({
