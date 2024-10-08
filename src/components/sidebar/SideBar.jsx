@@ -25,7 +25,7 @@ const Sidebar = () => {
   };
   return (
  
-    <div className="w-64 h-screen  flex flex-col ml-2 mt-4">
+    <div className="w-64 h-[96vh]  flex flex-col ml-2 mt-4">
       {/* Logo */}
       <div className="flex items-center p-4">
         <div className="text-2xl font-semibold text-grey-500">PRONTO</div>
@@ -108,11 +108,11 @@ const Sidebar = () => {
 
       <div className="mt-auto p-4">
         <NavLink 
-          href="#"
-          className={`flex items-center p-4  ${activeItem === 'logout' ? 'bg-red-400 text-white rounded-lg' : ''}`}
+          to='/'
+          className={`flex items-center justify-center p-2   ${activeItem === 'logout' ? 'bg-red-400 text-white rounded-lg' : ''}`}
           onClick={() => handleItemClick('logout')}
         >
-          <TbLogout2  className='mr-2'/>Log Out
+          <TbLogout2  className='mr-1'/>Log Out
         </NavLink>
       </div>
       
