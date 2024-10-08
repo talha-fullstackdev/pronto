@@ -5,7 +5,7 @@ const SmsChanel = ({ smsChanelRef }) => {
   const dispatch = useDispatch();
   const handleOnChange = () => {
     const smsChanelData = smsChanelRef.current.value;
-    dispatch(addData({ smsCHanel: smsChanelData }));
+    dispatch(addData({ smsChanel: smsChanelData }));
   };
   const data = useSelector((state) => state.formSlice);
   console.log(data)

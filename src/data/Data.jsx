@@ -1,2 +1,2 @@
-const data = {}
+const data = []
 export default data;

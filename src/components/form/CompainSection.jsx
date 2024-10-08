@@ -16,7 +16,7 @@ const CompainSection = ({campaignNameRef,campaignContactRef}) => {
         {/* First Campaign Input */}
         <div className="flex flex-col w-[644px]">
           <div className="flex justify-between items-center mb-1">
-            <h1 className="text-sm font-medium">Campaign Name</h1>
+            <h1 className="text-sm font-medium">Campaign contact</h1>
             <div className="flex items-center">
               <p className="mr-2 text-sm">Send Email & SMS</p>
               <Switch className="custom-switch" />
@@ -24,7 +24,7 @@ const CompainSection = ({campaignNameRef,campaignContactRef}) => {
           </div>
           <input
             type="text"
-            placeholder="Enter campaign name"
+            placeholder="Enter campaign contact"
             className="mt-2 p-2 border rounded-md"
             ref={campaignNameRef}
             onChange={handleOnChange}
