@@ -39,7 +39,7 @@ const SurveySection = ({ surveyRefs, resetAllFields }) => {
         <div className="mb-4 w-[300px]">
           <p className="text-sm font-semibold mb-1">Select Survey Template</p>
           <select ref={surveyRef} className="p-2 w-full border rounded-md mt-2">
-            <option value="">select survey one</option>
+            <option value="">select survey</option>
             <option value="Survey 1">Survey 1</option>
             <option value="Survey 2">Survey 2</option>
             <option value="Survey 3">Survey 3</option>
