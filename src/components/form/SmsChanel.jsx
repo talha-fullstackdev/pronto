@@ -29,4 +29,4 @@ const SmsChanel = ({ smsChanelRef }) => {
   );
 };
 
-export default SmsChanel;
+export default React.memo(SmsChanel);

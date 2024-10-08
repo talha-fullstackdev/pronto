@@ -1,16 +1,19 @@
-
+import React from "react";
 import { Switch } from "antd";
 import "antd/dist/reset.css"; // Import Ant Design reset CSS
 import { addData } from '../../slices/FromDataSlice';
 import { useDispatch} from 'react-redux';
+import { useCallback } from 'react';
+
 const CompainSection = ({campaignNameRef,campaignContactRef}) => {
   const dispatch = useDispatch();
-  const handleOnChange = () => {
-    const name = campaignNameRef.current.value
-    const contact = campaignContactRef.current.value
-    dispatch(addData({campainName:name,campainContact:contact}))
-
-  };
+  
+  const handleOnChange = useCallback(() => {
+      const name = campaignNameRef.current.value;
+      const contact = campaignContactRef.current.value;
+      dispatch(addData({ campainName: name, campainContact: contact }));
+  }, [campaignNameRef, campaignContactRef, dispatch]);
+  
   return (
     <div className="mt-6 flex gap-4">
         {/* First Campaign Input */}
@@ -54,4 +57,4 @@ const CompainSection = ({campaignNameRef,campaignContactRef}) => {
   )
 }
 
-export default CompainSection
+export default React.memo(CompainSection)

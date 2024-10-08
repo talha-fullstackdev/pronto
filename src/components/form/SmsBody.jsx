@@ -16,6 +16,6 @@ const SmsBody = ({messageRef}) => {
   )
 }
 
-export default SmsBody
+export default React.memo(SmsBody)
 
 

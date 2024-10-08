@@ -32,20 +32,20 @@ const Sidebar = () => {
       </div>
 
       <nav className="flex flex-col mt-2">
-        <a 
+        <NavLink 
           href="#"
           className={`flex items-center p-4  ${activeItem === 'overview' ? 'bg-red-400 text-white rounded-lg' : ''}`}
           onClick={() => handleItemClick('overview')}
         >
          <HiMiniSquares2X2 className='mr-2'/>Overview
-        </a>
-        <a 
+        </NavLink>
+        <NavLink 
           href="#"
           className={`flex items-center p-4  ${activeItem === 'activity-log' ? 'bg-red-400 text-white rounded-lg' : ''}`}
           onClick={() => handleItemClick('activity-log')}
         >
           <FaNetworkWired className='mr-2'/> Activity Log
-        </a>
+        </NavLink>
 
         {/* SMS Channel Dropdown */}
         <div>
@@ -63,19 +63,19 @@ const Sidebar = () => {
           </div>
           {isSmsDropdownOpen && (
             <div className="ml-8 flex flex-col">
-              <a href="#" className="p-2 hover:bg-gray-200">sms chanel one</a>
-              <a href="#" className="p-2 hover:bg-gray-200">sms chanel two</a>
+              <NavLink href="#" className="p-2 hover:bg-gray-200">sms chanel one</NavLink>
+              <NavLink href="#" className="p-2 hover:bg-gray-200">sms chanel two</NavLink>
             </div>
           )}
         </div>
 
-        <a 
-          href="#"
+        <NavLink 
+          to='/'
           className={`flex items-center p-4 ${activeItem === 'email-channel' ? 'bg-red-400 text-white rounded-lg' : ''}`}
           onClick={() => handleItemClick('email-channel')}
         >
          <MdEmail className='mr-2'/>Email Channel
-        </a>
+        </NavLink>
         <NavLink 
          to={"/whatsapp"}
           className={`flex items-center p-4  ${activeItem === 'whatsapp-channel' ? 'bg-red-400 text-white rounded-lg' : ''}`}
@@ -83,37 +83,37 @@ const Sidebar = () => {
         >
          <FaWhatsapp className='mr-2'/>WhatsApp Channel
         </NavLink>
-        <a 
+        <NavLink 
           href="#"
           className={`flex items-center p-4  ${activeItem === 'analytics' ? 'bg-red-400 text-white rounded-lg' : ''}`}
           onClick={() => handleItemClick('analytics')}
         >
           <TbBrandGoogleAnalytics className='mr-2'/>Analytics
-        </a>
-        <a 
+        </NavLink>
+        <NavLink 
           href="#"
           className={`flex items-center p-4 ${activeItem === 'layer-group' ? 'bg-red-400 text-white rounded-lg' : ''}`}
           onClick={() => handleItemClick('layer-group')}
         >
          <IoLayers className='mr-2'/>Layer Group
-        </a>
-        <a 
+        </NavLink>
+        <NavLink 
           href="#"
           className={`flex items-center p-4  ${activeItem === 'contact' ? 'bg-red-400 text-white rounded-lg' : ''}`}
           onClick={() => handleItemClick('contact')}
         >
           <MdPermContactCalendar className='mr-2'/> Contact
-        </a>
+        </NavLink>
       </nav>
 
       <div className="mt-auto p-4">
-        <a 
+        <NavLink 
           href="#"
           className={`flex items-center p-4  ${activeItem === 'logout' ? 'bg-red-400 text-white rounded-lg' : ''}`}
           onClick={() => handleItemClick('logout')}
         >
           <TbLogout2  className='mr-2'/>Log Out
-        </a>
+        </NavLink>
       </div>
       
     </div>

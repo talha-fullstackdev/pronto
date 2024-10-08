@@ -1,4 +1,4 @@
-import React, { useRef } from "react";
+import React from "react";
 import { Switch } from "antd";
 import { addData } from "../../slices/FromDataSlice";
 import { useDispatch } from "react-redux";
@@ -85,5 +85,5 @@ const SurveySection = ({surveyRefs,resetAllFields}) => {
   );
 };
 
-export default SurveySection;
+export default React.memo(SurveySection);
 

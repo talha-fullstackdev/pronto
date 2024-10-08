@@ -11,4 +11,4 @@ const PreviewMsg = ({handleOnClick}) => {
   )
 }
 
-export default PreviewMsg
+export default React.memo(PreviewMsg)
