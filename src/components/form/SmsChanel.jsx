@@ -20,7 +20,7 @@ const SmsChanel = ({ smsChanelRef }) => {
         ref={smsChanelRef}
         onChange={handleOnChange}
       >
-        <option value="">select chanel</option>
+        <option value="">Select Chanel</option>
         <option value="one">One</option>
         <option value="two">Two</option>
         <option value="three">Three</option>

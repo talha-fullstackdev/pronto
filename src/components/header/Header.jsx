@@ -99,12 +99,12 @@ const Header = () => {
       <div className="flex items-center space-x-4">
         {/* Bell Icon */}
         <div className="relative cursor-pointer">
-          <FaBell className="h-5 w-5 text-gray-500 mr-4" />
+          <FaBell className="h-5 w-5 text-gray-500 mr-4 hover:text-red-400" />
         </div>
 
         {/* Email Icon */}
         <div className="relative cursor-pointer">
-          <MdEmail className="h-5 w-5 text-gray-500 mr-4" />
+          <MdEmail className="h-5 w-5 text-gray-500 mr-4 hover:text-red-400" />
         </div>
 
         {/* Profile Picture and Info with Dropdown */}
@@ -121,7 +121,8 @@ const Header = () => {
 
             {/* Dropdown Arrow */}
             <svg className="h-5 w-5 text-gray-500" viewBox="0 0 20 20" fill="currentColor">
-              <path fillRule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clipRule="evenodd" />
+              {isDropdownOpen ? ( <path fillRule="evenodd" d="M4.293 10.707a1 1 0 011.414 0L10 6.414l4.293 4.293a1 1 0 001.414-1.414l-5-5a1 1 0 00-1.414 0l-5 5a1 1 0 001.414 1.414z" clipRule="evenodd" />):
+              (<path fillRule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clipRule="evenodd" />)}
             </svg>
           </div>
 

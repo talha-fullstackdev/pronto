@@ -24,6 +24,7 @@ const SurveySection = ({ surveyRefs, resetAllFields }) => {
       );
       resetAllFields();
       toast.success("your request has ben sent");
+   
     } else {
       toast.error("select all fields");
     }

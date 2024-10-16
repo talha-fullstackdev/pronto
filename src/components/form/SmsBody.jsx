@@ -11,7 +11,7 @@ const SmsBody = ({messageRef}) => {
   return (
     <div className="mt-6">
     <p className="text-sm font-medium mb-1">SMS Body Text</p>
-   <input type="text" ref={messageRef} onChange={handleOnChange} className="w-full pb-16 pl-2 pt-2 border rounded-md" placeholder="enter sms body text" />
+   <input type="text" ref={messageRef} onChange={handleOnChange} className="w-full pb-16 pl-2 pt-2 border rounded-md" placeholder="Enter Sms Body Text" />
   </div>
   )
 }
