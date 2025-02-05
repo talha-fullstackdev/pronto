@@ -6,8 +6,8 @@ import PreviewMsg from "./PreviewMsg";
 import "antd/dist/reset.css";
 import { toast } from "react-toastify";
 const SurveySection = ({ surveyRefs, resetAllFields }) => {
-  const { surveyRef, dateOneRef, timeRef, dateTwoRef } = surveyRefs;
   const dispatch = useDispatch();
+  const { surveyRef, dateOneRef, timeRef, dateTwoRef } = surveyRefs;
   const handleOnClick = () => {
     const survey = surveyRef.current.value;
     const dateOne = dateOneRef.current.value;
@@ -23,8 +23,7 @@ const SurveySection = ({ surveyRefs, resetAllFields }) => {
         })
       );
       resetAllFields();
-      toast.success("your request has ben sent");
-   
+      toast.success("your request has been sent");
     } else {
       toast.error("select all fields");
     }

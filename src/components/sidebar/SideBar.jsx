@@ -59,7 +59,7 @@ const Sidebar = () => {
             <span className="flex items-center">
             <BiSolidMessageRounded className='mr-2'/> SMS Channel
             </span>
-            <span>{isSmsDropdownOpen ? <MdOutlineKeyboardArrowDown className='text-xl'/> : <MdOutlineKeyboardArrowUp className='text-xl'/>}</span>
+            <span>{isSmsDropdownOpen ? <MdOutlineKeyboardArrowUp className='text-xl'/> : <MdOutlineKeyboardArrowDown className='text-xl'/>}</span>
           </div>
           {isSmsDropdownOpen && (
             <div className="ml-8 flex flex-col">

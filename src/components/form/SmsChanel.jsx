@@ -8,8 +8,7 @@ const SmsChanel = ({ smsChanelRef }) => {
     dispatch(addData({ smsChanel: smsChanelData }));
   };
   const data = useSelector((state) => state.formSlice);
-  console.log(data)
-
+  console.log(data);
   return (
     <div className="sms-channel">
       <h1 className="text-lg font-medium mb-1">Select SMS Channel</h1>

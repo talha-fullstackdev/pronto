@@ -1,9 +1,8 @@
 import { configureStore } from "@reduxjs/toolkit";
-import formSlice from "../slices/FromDataSlice"
+import formSlice from "../slices/FromDataSlice";
 const store = configureStore({
-    reducer: {
-      formSlice,
-    },
-  });
+  reducer: {
+    formSlice,
+  },
+});
 export default store;
-  
