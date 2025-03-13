@@ -7,14 +7,12 @@ import User from "../../assets/images/user.jpeg";
 import { NavLink } from 'react-router-dom';
 
 const Header = () => {
-  // State to handle dropdown visibility
   const [isDropdownOpen, setIsDropdownOpen] = useState(false);
 
   const toggleDropdown = () => {
     setIsDropdownOpen(!isDropdownOpen);
   };
 
-  // Close the dropdown after clicking an option
   const handleOptionClick = () => {
     setIsDropdownOpen(false);
   };
