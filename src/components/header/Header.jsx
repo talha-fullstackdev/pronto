@@ -89,7 +89,7 @@ const Header = () => {
   };
 
   return (
-    <header className="flex justify-between items-center p-2 h-16 w-full mr-4">
+    <header className="flex justify-between items-center p-2 h-16 w-full mr-4 px-8">
       {/* Left Section - Title */}
       <div className="text-xl font-semibold">
         Title here

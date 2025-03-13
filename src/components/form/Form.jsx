@@ -25,7 +25,7 @@ const Form = () => {
     surveyRefs.dateTwoRef.current.value = "";
   };
   return (
-    <div className="p-4">
+    <div className="p-4 px-8 w-full">
       <SmsChanel smsChanelRef={smsChanelRef} />
       <CompainSection
         campaignNameRef={campaignNameRef}

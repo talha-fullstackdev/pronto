@@ -34,14 +34,14 @@ const Sidebar = () => {
       <nav className="flex flex-col mt-2">
         <NavLink 
           href="#"
-          className={`flex items-center p-4  ${activeItem === 'overview' ? 'bg-red-400 text-white rounded-lg' : ''}`}
+          className={`flex items-center p-4   ${activeItem === 'overview' ? 'bg-red-400 text-white rounded-lg' : ''}`}
           onClick={() => handleItemClick('overview')}
         >
          <HiMiniSquares2X2 className='mr-2'/>Overview
         </NavLink>
         <NavLink 
           href="#"
-          className={`flex items-center p-4  ${activeItem === 'activity-log' ? 'bg-red-400 text-white rounded-lg' : ''}`}
+          className={`flex items-center p-4  w-[200px] ${activeItem === 'activity-log' ? 'bg-red-400 text-white rounded-lg' : ''}`}
           onClick={() => handleItemClick('activity-log')}
         >
           <FaNetworkWired className='mr-2'/> Activity Log
